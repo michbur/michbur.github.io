@@ -44,7 +44,7 @@ head(dat)
 ## 6  -95 8930
 {% endhighlight %}
 
-# Nice tables
+# Tables
 
 
 {% highlight r %}
