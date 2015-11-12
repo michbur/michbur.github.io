@@ -1,0 +1,44 @@
+---
+title: "First post"
+author: "Michal Burdukiewicz"
+date: "2015-11-12 13:00:00"
+output: html_document
+layout: post
+comments: true
+categories:
+- varia
+---
+
+# Very brief introduction
+
+This blog is devoted to my experience with R. I will especially focus on obscure R packages that I found interesting and useful.
+
+Below I'm testing some features of my blog, like:
+
+# MathJax
+
+$$
+y = x^2 + x
+$$
+
+# Embedding and printing R code
+
+```{r}
+library(dplyr)
+dat <- data.frame(x = -100:100) %>% 
+  mutate(y = x^2 + x)
+
+head(dat)
+```
+
+# Nice tables
+
+```{r, results='asis'}
+kable(head(dat))
+```
+
+# Figures
+
+```{r, results='asis'}
+plot(dat, type = "l")
+```
