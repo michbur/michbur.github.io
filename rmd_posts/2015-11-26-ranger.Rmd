@@ -1,0 +1,17 @@
+---
+title: "ranger - very quick Random Forests in R"
+author: "Michal Burdukiewicz"
+date: "2015-11-26 13:00:00"
+output: html_document
+bibliography: blog.bib
+layout: post
+comments: true
+categories:
+  - R
+---
+
+R has several implementations of [Random Forests technique](https://www.stat.berkeley.edu/~breiman/RandomForests/cc_home.htm). One of them, [ranger package](http://cran.r-project.org/package=ranger) recently caught my eye. Coming from the same group that developed Random Jungle [@schwarz_safari_2010], another quick implementation of Random Forests, **ranger** was immediately implemented in my data analysis frameworks.
+
+More details and exhaustive benchmarks can be found in the article describing **ranger** accessible currently on  [arxiv](http://arxiv.org/abs/1508.04409). 
+
+# References
