@@ -1,0 +1,32 @@
+---
+title: "r-devel imports"
+author: "Michal Burdukiewicz"
+date: "2015-11-12 13:00:00"
+output: html_document
+layout: post
+comments: true
+categories:
+  - R
+---
+
+We are all aware of [the change in r-devel](http://developer.r-project.org/blosxom.cgi/R-devel/NEWS/2015/06/29#n2015-06-29), which requires package maintainers to declare all imports from default packages (aside from base package). Luckily, people from CRAN added convenient prompt at the R CMD CHECK of R-devel to remind us which functions should be imported into the namespace of our package. Unfortunately, this version is not compatible with the Roxygen documentation.
+
+Below I present R script converting output from the prompt to Roxygen-friendly version.
+
+
+{% highlight r %}
+library(dplyr)
+
+# x must a text file containing only the information from R CMD CHECK about missing imports
+cran2roxygen <- function(x)
+  readLines(x) %>%
+  gsub('"', " ", ., fixed = TRUE) %>%
+  gsub("[(),]", " ", .) %>%
+  gsub("[ ]{1,}", " ", .) %>%
+  gsub("^ ", "", .) %>%
+  gsub("importFrom", "\n#' @importFrom", .) %>%
+  cat(., sep = "", file = "result.txt")
+
+# see the example
+cran2roxygen("https://raw.githubusercontent.com/michbur/silva_rerum/master/cran2roxygen/cran2roxygen_example.txt")
+{% endhighlight %}

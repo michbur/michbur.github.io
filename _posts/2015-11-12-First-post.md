@@ -26,6 +26,26 @@ $$
 
 {% highlight r %}
 library(dplyr)
+{% endhighlight %}
+
+
+
+{% highlight text %}
+## 
+## Attaching package: 'dplyr'
+## 
+## The following objects are masked from 'package:stats':
+## 
+##     filter, lag
+## 
+## The following objects are masked from 'package:base':
+## 
+##     intersect, setdiff, setequal, union
+{% endhighlight %}
+
+
+
+{% highlight r %}
 dat <- data.frame(x = -100:100) %>% 
   mutate(y = x^2 + x)
 

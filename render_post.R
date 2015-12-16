@@ -39,4 +39,4 @@ render_post <- function(single_post) {
   print("Done")
 }
 
-render_post(list.files("rmd_posts/"))
+sapply(list.files("rmd_posts/"), render_post)
