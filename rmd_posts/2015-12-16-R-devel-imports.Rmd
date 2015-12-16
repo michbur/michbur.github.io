@@ -1,7 +1,7 @@
 ---
 title: "r-devel imports"
 author: "Michal Burdukiewicz"
-date: "2015-11-12 13:00:00"
+date: "2015-12-16 13:00:00"
 output: html_document
 layout: post
 comments: true
