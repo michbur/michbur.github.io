@@ -30,6 +30,7 @@ render_post <- function(single_post) {
        output = output_name,
        envir = parent.frame(), 
        quiet = TRUE)
+
   all_lines <- readLines(output_name)
   
   #change adress of figures
