@@ -33,11 +33,19 @@ library(dplyr)
 {% highlight text %}
 ## 
 ## Attaching package: 'dplyr'
-## 
+{% endhighlight %}
+
+
+
+{% highlight text %}
 ## The following objects are masked from 'package:stats':
 ## 
 ##     filter, lag
-## 
+{% endhighlight %}
+
+
+
+{% highlight text %}
 ## The following objects are masked from 'package:base':
 ## 
 ##     intersect, setdiff, setequal, union
@@ -89,4 +97,4 @@ kable(head(dat))
 plot(dat, type = "l")
 {% endhighlight %}
 
-![plot of chunk unnamed-chunk-3]({{ site.url }}/images/2015-11-12-First-post/unnamed-chunk-3-1.svg) 
+![plot of chunk unnamed-chunk-3]({{ site.url }}/images/2015-11-12-First-post/unnamed-chunk-3-1.svg)
